@@ -19,7 +19,7 @@ class Square extends React.Component {
         if(this.props.value.isImage){
             return (
 
-                <Bounce><img style={{height:"150px", width:"150px", margin:"0px"}} src={this.props.value.url} className='square'>
+                <Bounce><img style={{height:"150px", width:"300px", margin:"0px"}} src={this.props.value.url} className='square'>
                 </img></Bounce>
 
 
@@ -27,7 +27,7 @@ class Square extends React.Component {
         } else {
             return (
                 <Flip>
-                    <button style={{height:"150px", width:"150px", margin:"0px", backgroundColor:this.getRandomColor()}} className='square'>
+                    <button style={{height:"150px", width:"300px", margin:"0px", backgroundColor:this.getRandomColor()}} className='square'>
                         {this.props.value.keyword}
                     </button>
                 </Flip>
