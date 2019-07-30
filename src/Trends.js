@@ -131,14 +131,18 @@ class Board extends React.Component {
         }
     }
 
+    switch(){
+        var index = parseInt(Math.random() * (24))
+        var isImage = Math.random() >= 0.5
+        this.switchAllComponents(isImage, index)
+    }
+
     switchImageText(){
         setInterval(() => {
-            var index = parseInt(Math.random() * (24))
-            var isImage = Math.random() >= 0.5
-
-            this.switchAllComponents(isImage, index)
-
-        }, 500);
+            this.switch();
+            this.switch();
+            this.switch();
+        }, 1000);
     }
 
     componentDidMount() {
